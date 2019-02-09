@@ -26,7 +26,7 @@ def im_port():
         except:
             # If it went wrong, go back and loop again.
             continue
-           file_path_list.append(file_path)
+            file_path_list.append(file_path)
 
 def ex_port(data,name):
     check_dir()
@@ -45,7 +45,10 @@ def convert(ori_string,shift_value):
         character = chr(ord(character)+shift_value)
         new_string += character
 
+    print("-"*20+"Start line"+"-"*20)
     print(new_string)
+    print("-"*21+"End line"+"-"*21)
+    print()
     return new_string
 
 def main():
@@ -62,10 +65,12 @@ def main():
             # Convert a string
             print("Input anying:")
             ori_string = input(">>> ")
+            print()
             while True:
                 print("Input shift value:")
                 try:
                     shift_value = int(input(">>> "))
+                    print()
                 except:
                     print("Invalid input!")
                     continue
