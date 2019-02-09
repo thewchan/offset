@@ -15,6 +15,7 @@ def im_port():
     while True:
         print("Drag the file here or keyin the pathname.")
         file_path = input(">>> ")
+        print()
         try:
             # try to open the file
             with open(file_path, "r") as file:
@@ -88,7 +89,8 @@ def main():
             ori_string = im_port()
 
             print("Input shift value:")
-            shift_value = int(input())
+            shift_value = int(input(">>> "))
+            print()
 
             data = convert(ori_string[0],shift_value)
             ex_port(data,ori_string[1])
