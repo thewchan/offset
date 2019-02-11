@@ -95,7 +95,11 @@ def main():
             data = convert(ori_string[0],shift_value)
             ex_port(data,ori_string[1])
             #Reveal in Finder
-            subprocess.call(["open","export"])
+            try:
+                # compatibl for mac and linux
+                subprocess.call(["open","export"])
+            except:
+                subprocess.call(["xdg-open","export"])
 
         elif function_option == "w":
             # Show Current working directory
