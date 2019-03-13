@@ -1,0 +1,113 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'SSNT_ui.ui'
+#
+# Created by: PyQt5 UI code generator 5.11.3
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_SSNT(object):
+    def setupUi(self, SSNT):
+        SSNT.setObjectName("SSNT")
+        SSNT.resize(576, 350)
+        self.verticalLayout = QtWidgets.QVBoxLayout(SSNT)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.horizontalLayout_1 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_1.setSpacing(0)
+        self.horizontalLayout_1.setObjectName("horizontalLayout_1")
+        self.label_filepath = QtWidgets.QLabel(SSNT)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label_filepath.sizePolicy().hasHeightForWidth())
+        self.label_filepath.setSizePolicy(sizePolicy)
+        self.label_filepath.setMinimumSize(QtCore.QSize(65, 0))
+        self.label_filepath.setMaximumSize(QtCore.QSize(65, 16777215))
+        self.label_filepath.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_filepath.setObjectName("label_filepath")
+        self.horizontalLayout_1.addWidget(self.label_filepath)
+        self.lineEdit_filepath = QtWidgets.QLineEdit(SSNT)
+        self.lineEdit_filepath.setObjectName("lineEdit_filepath")
+        self.horizontalLayout_1.addWidget(self.lineEdit_filepath)
+        self.toolButton_filepath = QtWidgets.QToolButton(SSNT)
+        self.toolButton_filepath.setObjectName("toolButton_filepath")
+        self.horizontalLayout_1.addWidget(self.toolButton_filepath)
+        self.verticalLayout.addLayout(self.horizontalLayout_1)
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_2.setSpacing(0)
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.label_input = QtWidgets.QLabel(SSNT)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label_input.sizePolicy().hasHeightForWidth())
+        self.label_input.setSizePolicy(sizePolicy)
+        self.label_input.setMinimumSize(QtCore.QSize(65, 0))
+        self.label_input.setMaximumSize(QtCore.QSize(65, 16777215))
+        self.label_input.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_input.setIndent(5)
+        self.label_input.setObjectName("label_input")
+        self.horizontalLayout_2.addWidget(self.label_input)
+        self.textEdit_input = QtWidgets.QTextEdit(SSNT)
+        self.textEdit_input.setObjectName("textEdit_input")
+        self.horizontalLayout_2.addWidget(self.textEdit_input)
+        self.pushButton_clear = QtWidgets.QPushButton(SSNT)
+        self.pushButton_clear.setMinimumSize(QtCore.QSize(100, 0))
+        self.pushButton_clear.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.pushButton_clear.setObjectName("pushButton_clear")
+        self.horizontalLayout_2.addWidget(self.pushButton_clear)
+        self.verticalLayout.addLayout(self.horizontalLayout_2)
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_3.setSpacing(0)
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        self.label_result = QtWidgets.QLabel(SSNT)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label_result.sizePolicy().hasHeightForWidth())
+        self.label_result.setSizePolicy(sizePolicy)
+        self.label_result.setMinimumSize(QtCore.QSize(65, 0))
+        self.label_result.setMaximumSize(QtCore.QSize(65, 16777215))
+        self.label_result.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_result.setIndent(5)
+        self.label_result.setObjectName("label_result")
+        self.horizontalLayout_3.addWidget(self.label_result)
+        self.textEdit_result = QtWidgets.QTextEdit(SSNT)
+        self.textEdit_result.setObjectName("textEdit_result")
+        self.horizontalLayout_3.addWidget(self.textEdit_result)
+        self.pushButton_copy = QtWidgets.QPushButton(SSNT)
+        self.pushButton_copy.setMinimumSize(QtCore.QSize(100, 0))
+        self.pushButton_copy.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.pushButton_copy.setObjectName("pushButton_copy")
+        self.horizontalLayout_3.addWidget(self.pushButton_copy)
+        self.verticalLayout.addLayout(self.horizontalLayout_3)
+        self.pushButton_save = QtWidgets.QPushButton(SSNT)
+        self.pushButton_save.setObjectName("pushButton_save")
+        self.verticalLayout.addWidget(self.pushButton_save)
+
+        self.retranslateUi(SSNT)
+        QtCore.QMetaObject.connectSlotsByName(SSNT)
+
+    def retranslateUi(self, SSNT):
+        _translate = QtCore.QCoreApplication.translate
+        SSNT.setWindowTitle(_translate("SSNT", "SSNT by Ron"))
+        self.label_filepath.setText(_translate("SSNT", "File Path :"))
+        self.toolButton_filepath.setText(_translate("SSNT", "..."))
+        self.label_input.setText(_translate("SSNT", "Input :"))
+        self.pushButton_clear.setText(_translate("SSNT", "Clear"))
+        self.label_result.setText(_translate("SSNT", "Result :"))
+        self.pushButton_copy.setText(_translate("SSNT", "Copy"))
+        self.pushButton_save.setText(_translate("SSNT", "Save"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    SSNT = QtWidgets.QWidget()
+    ui = Ui_SSNT()
+    ui.setupUi(SSNT)
+    SSNT.show()
+    sys.exit(app.exec_())
+
