@@ -13,5 +13,5 @@
 
 ### 2. Input a number to shift
 
-*__Fuction 2 will create a convert file in export folder.__*
+*__Fuction 2 will save into a folder named export.__*
 
