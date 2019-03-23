@@ -16,9 +16,24 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_6">
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <layout class="QHBoxLayout" name="mainlayout_1">
+      <property name="spacing">
+       <number>5</number>
+      </property>
+      <property name="leftMargin">
+       <number>5</number>
+      </property>
+      <property name="topMargin">
+       <number>5</number>
+      </property>
+      <property name="rightMargin">
+       <number>5</number>
+      </property>
+      <property name="bottomMargin">
+       <number>5</number>
+      </property>
       <item>
-       <widget class="QFrame" name="frame_3">
+       <widget class="QFrame" name="tl_frame">
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
         </property>
@@ -27,17 +42,17 @@
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_4">
          <item>
-          <widget class="QLabel" name="label_4">
+          <widget class="QLabel" name="label_resource">
            <property name="text">
             <string>Resource</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QTextEdit" name="textEdit_2"/>
+          <widget class="QTextEdit" name="textEdit_resource"/>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_4">
+          <widget class="QPushButton" name="pushButton_clear_resource">
            <property name="text">
             <string>Clear</string>
            </property>
@@ -47,7 +62,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QFrame" name="frame_2">
+       <widget class="QFrame" name="tm_frame_1">
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
         </property>
@@ -56,7 +71,7 @@
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_3">
          <item>
-          <widget class="QFrame" name="frame_4">
+          <widget class="QFrame" name="tm_frame_2">
            <property name="frameShape">
             <enum>QFrame::StyledPanel</enum>
            </property>
@@ -65,7 +80,7 @@
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout_4">
             <item>
-             <widget class="QLabel" name="label">
+             <widget class="QLabel" name="label_shiftLevel">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                 <horstretch>0</horstretch>
@@ -94,7 +109,7 @@
           </widget>
          </item>
          <item>
-          <spacer name="verticalSpacer">
+          <spacer name="verticalSpacer_1">
            <property name="orientation">
             <enum>Qt::Vertical</enum>
            </property>
@@ -107,24 +122,37 @@
           </spacer>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_2">
+          <widget class="QPushButton" name="pushButton_encode">
            <property name="text">
             <string>»</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton">
+          <widget class="QPushButton" name="pushButton_decode">
            <property name="text">
             <string>«</string>
            </property>
           </widget>
          </item>
+         <item>
+          <spacer name="verticalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
         </layout>
        </widget>
       </item>
       <item>
-       <widget class="QFrame" name="frame">
+       <widget class="QFrame" name="tr_frame">
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
         </property>
@@ -133,17 +161,17 @@
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_2">
          <item>
-          <widget class="QLabel" name="label_5">
+          <widget class="QLabel" name="label_convert">
            <property name="text">
             <string>Convert</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QTextEdit" name="textEdit"/>
+          <widget class="QTextEdit" name="textEdit_convert"/>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_3">
+          <widget class="QPushButton" name="pushButton_clear_convert">
            <property name="text">
             <string>Clear</string>
            </property>
@@ -155,17 +183,41 @@
      </layout>
     </item>
     <item>
-     <layout class="QVBoxLayout" name="verticalLayout_5">
+     <layout class="QVBoxLayout" name="mainlayout_2">
       <property name="spacing">
-       <number>0</number>
+       <number>5</number>
+      </property>
+      <property name="leftMargin">
+       <number>5</number>
+      </property>
+      <property name="topMargin">
+       <number>5</number>
+      </property>
+      <property name="rightMargin">
+       <number>5</number>
+      </property>
+      <property name="bottomMargin">
+       <number>5</number>
       </property>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout">
         <property name="spacing">
          <number>10</number>
         </property>
+        <property name="leftMargin">
+         <number>5</number>
+        </property>
+        <property name="topMargin">
+         <number>5</number>
+        </property>
+        <property name="rightMargin">
+         <number>5</number>
+        </property>
+        <property name="bottomMargin">
+         <number>5</number>
+        </property>
         <item>
-         <widget class="QLabel" name="label_3">
+         <widget class="QLabel" name="label_import">
           <property name="minimumSize">
            <size>
             <width>60</width>
@@ -181,17 +233,17 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit"/>
+         <widget class="QLineEdit" name="lineEdit_import_path"/>
         </item>
         <item>
-         <widget class="QToolButton" name="toolButton">
+         <widget class="QToolButton" name="toolButton_import_path">
           <property name="text">
            <string>...</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton_6">
+         <widget class="QPushButton" name="pushButton_load">
           <property name="text">
            <string>Load</string>
           </property>
@@ -204,8 +256,20 @@
         <property name="spacing">
          <number>10</number>
         </property>
+        <property name="leftMargin">
+         <number>5</number>
+        </property>
+        <property name="topMargin">
+         <number>5</number>
+        </property>
+        <property name="rightMargin">
+         <number>5</number>
+        </property>
+        <property name="bottomMargin">
+         <number>5</number>
+        </property>
         <item>
-         <widget class="QLabel" name="label_2">
+         <widget class="QLabel" name="label_saveto">
           <property name="minimumSize">
            <size>
             <width>60</width>
@@ -221,17 +285,17 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_2"/>
+         <widget class="QLineEdit" name="lineEdit_saveto_path"/>
         </item>
         <item>
-         <widget class="QToolButton" name="toolButton_2">
+         <widget class="QToolButton" name="toolButton_saveto_path">
           <property name="text">
            <string>...</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton_5">
+         <widget class="QPushButton" name="pushButton_save">
           <property name="text">
            <string>Save</string>
           </property>
@@ -256,11 +320,9 @@
     <property name="title">
      <string>File</string>
     </property>
-    <addaction name="actionOpen"/>
-    <addaction name="actionSave"/>
-    <addaction name="actionSave_as"/>
-    <addaction name="separator"/>
-    <addaction name="actionPreferences"/>
+    <addaction name="openAction"/>
+    <addaction name="saveAction"/>
+    <addaction name="save_asAction"/>
     <addaction name="separator"/>
     <addaction name="actionClose"/>
    </widget>
@@ -268,33 +330,40 @@
     <property name="title">
      <string>Edit</string>
     </property>
-    <addaction name="actionCopy"/>
-    <addaction name="actionPaste"/>
-    <addaction name="actionClear"/>
+    <addaction name="clearAction"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionOpen">
+  <action name="openAction">
    <property name="text">
     <string>Open</string>
+   </property>
+   <property name="toolTip">
+    <string>Open and load the file to resource</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+O</string>
    </property>
   </action>
-  <action name="actionSave">
+  <action name="saveAction">
    <property name="text">
     <string>Save</string>
+   </property>
+   <property name="toolTip">
+    <string>Overwrite the current file</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+S</string>
    </property>
   </action>
-  <action name="actionSave_as">
+  <action name="save_asAction">
    <property name="text">
     <string>Save as</string>
+   </property>
+   <property name="toolTip">
+    <string>Save as a new file</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+Shift+S</string>
@@ -302,31 +371,40 @@
   </action>
   <action name="actionClose">
    <property name="text">
-    <string>Close</string>
+    <string>Exit</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+W</string>
    </property>
   </action>
-  <action name="actionCopy">
+  <action name="copyAction">
    <property name="text">
     <string>Copy</string>
+   </property>
+   <property name="toolTip">
+    <string>Copy text from convert</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+C</string>
    </property>
   </action>
-  <action name="actionPaste">
+  <action name="pasteAction">
    <property name="text">
     <string>Paste</string>
+   </property>
+   <property name="toolTip">
+    <string>Paste to the resource</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+V</string>
    </property>
   </action>
-  <action name="actionClear">
+  <action name="clearAction">
    <property name="text">
-    <string>Clear</string>
+    <string>Clear all</string>
+   </property>
+   <property name="toolTip">
+    <string>Formate all cells</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+Backspace</string>
