@@ -1,5 +1,0 @@
-******This is a test file.******
-I don't even know why this file exist!
-If you saw this file please try to decode or encode.
-I think it will be fun!
-$ Ron Chang @ Feb. 9. 2019

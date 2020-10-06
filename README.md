@@ -1,17 +1,27 @@
-# SS (Shift_String)
-<p align="right">by <a href="https://github.com/Ron-Chang">Ron Chang</a></p>
+# Text Shifter
 
-+ Shift String
-+ Shift Text_File
+## import as a module
 
+```python
+from text_shifter import TextShifter
+TestShifter.convert(text, number)
+```
 
-### 1. Selection:  
-`- 1. String`  
-`- 2. Text file`  
-`- w. Get current directory`  
-`- q. Exit`  
+## Command mode:
 
-### 2. Input a number to shift
+```bash
+python3 letter_shifter.py -n 10 -s 'Hello'
+```
 
-*__Fuction 2 will create a new file into a folder named export.__*
+## File mode:
+>The new file will be stored at '~/text_shifter/export/filename_%Y%m%d_%H%M%S.ext'
 
+```bash
+python3 letter_shifter.py -n 10 -f 'path/filename.ext'
+```
+
+## Get into interactive mode
+
+```bash
+python3 letter_shifter.py -i [-n int]
+```
