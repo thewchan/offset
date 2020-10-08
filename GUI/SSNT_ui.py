@@ -92,7 +92,7 @@ class Ui_SSNT(object):
 
     def retranslateUi(self, SSNT):
         _translate = QtCore.QCoreApplication.translate
-        SSNT.setWindowTitle(_translate("SSNT", "SSNT by Ron"))
+        SSNT.setWindowTitle(_translate("Offset", "offset by Ron"))
         self.label_filepath.setText(_translate("SSNT", "File Path :"))
         self.toolButton_filepath.setText(_translate("SSNT", "..."))
         self.label_input.setText(_translate("SSNT", "Input :"))
