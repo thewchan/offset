@@ -19,7 +19,7 @@ from offset import Offset
 Offset.convert(text, number)
 ```
 
-### Command
+### CLI
 
 - Basic mode:
 ```bash
