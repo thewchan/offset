@@ -10,11 +10,11 @@ import platform
 from optparse import OptionParser
 from datetime import datetime
 
-class TextShifter:
+class Offset:
     """
     - import as a module
 
-        from text_shifter import TextShifter
+        from offset import Offset
         TestShifter.convert(text, number)
 
     - Command mode:
@@ -22,7 +22,7 @@ class TextShifter:
         $python3 letter_shifter.py -n 10 -s 'Hello'
 
     - File mode:
-        >The new file will be stored at '~/text_shifter/export/filename_%Y%m%d_%H%M%S.ext'
+        >The new file will be stored at '~/offset_export/filename_%Y%m%d_%H%M%S.ext'
 
         $python3 letter_shifter.py -n 10 -f 'path/filename.ext'
 
@@ -31,7 +31,7 @@ class TextShifter:
         $python3 letter_shifter.py -i [-n int]
     """
 
-    EXPORT_PATH = os.path.expanduser('~/text_shifter/export/')
+    EXPORT_PATH = os.path.expanduser('~/offset_export/')
 
     OS = platform.system()  # {'Linux': 'Linux', 'Mac': 'Darwin', 'Windows': 'Windows'}
 
@@ -70,6 +70,23 @@ class TextShifter:
 
     @classmethod
     def convert(cls, text, number):
+        """
+        :param text: input string
+        :type text: str
+        :param number: shift value
+        :type number: int
+        :rtype: str
+        :return: text shift result
+
+        >>> Offset.convert(text="hello, world", number=1)
+        'ifmmp-!xpsme'
+
+        >>> Offset.convert("ifmmp-!xpsme", -1)
+        'hello, world'
+
+        >>> Offset.convert("ifmmp-!xpsme", 1000000)
+        'hello, world'
+        """
         if number > cls.LIMIT:
             raise ValueError(f'number must less than {cls.LIMIT:,}')
         return ''.join(chr(ord(_) + number) for _ in text)
@@ -80,7 +97,7 @@ class TextShifter:
             while True:
                 text = input('input string ([ctrl-c] to quit): ')
                 print(cls.convert(text=text, number=number))
-                sys.exit()
+            sys.exit()
         while True:
             text = input('input string ([ctrl-c] to quit): ')
             number = int(input('input shift number: '))
@@ -112,7 +129,10 @@ class TextShifter:
         sys.exit()
 
     @classmethod
-    def run(cls):
+    def cli(cls):
+        """
+        command line
+        """
         os.makedirs(cls.EXPORT_PATH, exist_ok=True)
 
         args = cls._get_args()
@@ -124,6 +144,3 @@ class TextShifter:
         if args.directory:
             cls._file_mode(directory=args.directory, number=args.number, is_navigate=args.is_open)
         cls.help()
-
-if __name__ == '__main__':
-    TextShifter.run()
