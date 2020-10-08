@@ -40,10 +40,8 @@ offset -n 10 -f '/filepath/and/filename.ext'
 offset -i [-n int]
 ```
 
-### GUI
-
-- in progress
-![GUI Screenshot](https://github.com/Ron-Chang/offset/tree/master/img/gui.png)
+### GUI(IN PROGRESS)
+![Screenshot](https://github.com/Ron-Chang/offset/blob/master/img/gui.png?raw=true)
 
 If you like my work, please consider buying me a coffee or [PayPal](https://paypal.me/RonDevStudio?locale.x=zh_TW)
 Thanks for your support! Cheers! 🎉
